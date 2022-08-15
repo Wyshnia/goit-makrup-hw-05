@@ -143,23 +143,28 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.header-item-contacts:hover,
+.header-item-contacts:focus {
+    color: #2196F3;
+}
+
 .header-item-link.current::after{
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 100%;
     height: 4px;
-    bottom: 0;
     background-color: #2196F3;
+    bottom: 0;
     border-radius: 2px;
-    opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.header-item-link:hover::after {
-    opacity: 1;
-}
 
 
 .icon-envelop,
@@ -172,10 +177,7 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-item-contacts:hover,
-.header-item-contacts:focus {
-    color: #2196F3;
-}
+
 
 .header-item-contacts:hover .icon-envelop,
 .header-item-contacts:focus .icon-smartphone {
@@ -234,6 +236,7 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
     padding: 6px 22px;
+    cursor: pointer;
     background: #F5F4FA;
     border-radius: 4px;
     border: 0px solid #F5F4FA;
@@ -273,6 +276,10 @@ img {
 
 .card {
     border: 1px solid #EEEEEE;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover,
